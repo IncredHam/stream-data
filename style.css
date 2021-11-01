@@ -1,4 +1,318 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  
+  font-family: 'Merriweather', serif;
+  background-color: #FCF7F8;
+  color: #0D1B2A;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("wp7287456.jpg");
+  min-height: 100%;
+}
+
+.menu {
+  display: none;
+}
+
 p {
    text-indent: 45px;
-   font-family: "Times New Roman", Times, serif;
+  /* font-family: "Times New Roman", Times, serif; */
 }
+form {
+  /* Center the form on the page */
+  margin: 0 auto;
+  width: 65%;
+  font-family: "Inconsolata", sans-serif;
+  /* Form outline */
+  padding: 1em;
+  border: 1px solid #E36397;
+  border-radius: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form li + li {
+  margin-top: 1em;
+}
+
+label {
+  /* Uniform size & alignment */
+  display: inline-block;
+  width: 35%;
+  text-align: right;
+  margin-left: 5%;
+}
+
+#bug_key label {
+  width: 15%;
+  text-align: left;
+}
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  text-align: left;
+  /* Uniform text field size */
+  width: 20%;
+  box-sizing: border-box;
+  background-color: #FCF7F8;
+  /* Match form field borders */
+  border: 0px solid #E36397;
+  border-radius: 0;
+  border-left: 2px solid #E36397;
+  padding: 1em;
+}
+
+input:focus,
+textarea:focus {
+  /* Additional highlight for focused elements */
+  border: 0px solid #E36397;
+  border-left: 2px solid #E36397;
+/*   border-color: #000; */
+}
+
+textarea {
+  /* Align multiline text fields with their labels */
+  vertical-align: top;
+
+  /* Provide space to type some text */
+  height: 5em;
+}
+
+.button {
+  /* Align buttons with the text fields */
+  margin: auto; /* same size as the label elements */
+}
+
+#landing {
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #90C290;
+  
+}
+
+#hero_img {
+  width: 100%;
+  height: 100vh;
+}
+
+#down-arrow {
+  position: absolute;
+  top: 85%;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hero_text {
+  position: absolute;
+  text-align: center;
+  top:35%;
+  left:50%;
+  transform: translate(-50%, -50%);
+    font-size: 4em;
+}
+
+#data_form button{
+	margin-top: 5%;
+	margin-left: 22.5%;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5em;
+}
+
+#data_form h2 {
+  text-align: center;
+}
+
+#bug_key h2 {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #FFF;
+}
+
+.go_to_data {
+    background-color: #709c50;
+	cursor:pointer;
+	color:#FCF7F8;
+	font-family: 'Montserrat', sans-serif;
+	font-size:2em;
+	padding:1em;
+	border-radius: 1.5em;
+	text-decoration:none;
+	position: absolute;
+	 top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.go_to_data:hover {
+	background-color:#53743b;
+}
+/* .go_to_data:active {
+	position:relative;
+	top:1px;
+} */
+
+footer {
+  text-align: center;
+}
+
+#about {
+  width: 75%;
+  padding: 5%;
+  font-size: 1.5em;
+  margin: auto;
+}
+#contact {
+  width: 75%;
+  padding: 5%;
+  font-size: 1.5em;
+  margin: auto;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0D1B2A;
+  font-size: 1.5em;
+  padding-bottom: .3em;
+  border-bottom: 2px solid #90C290;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #0D1B2A;
+  font-size: 1.5em;
+  padding-bottom: .3em;
+  /* border-bottom: 2px solid #90C290; */
+}
+#nav-bar {
+	padding: 20px 20px;
+  background-color: #90C290;
+  height: 7.5vh;
+}
+#nav-bar a{
+	float: right;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.active {
+  border-bottom: 2px solid #f2f2f2;
+}
+
+#bug_key {
+  margin: auto;
+  width:75%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#bug_key li {
+  list-style: none;
+  padding: 10px 5px;
+}
+#head_of_key {
+  width: 55%;
+  margin: auto;
+  text-align: center;
+}
+#bug {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+  display: block;
+}
+/* #f1, #f2 {
+  grid-area: row1;
+}
+#f3, #f4 {
+  grid-area: row2;
+}
+#f5, #f6 {
+  grid-area: row3;
+}
+#f7, #f8 {
+  grid-area: row4;
+}
+#f9, #f10 {
+  grid-area: row5;
+}
+#f11, #f12 {
+  grid-area: row6;
+}
+#f13, #f14 {
+  grid-area: row7;
+}
+#f15, #f16 {
+  grid-area: row8;
+}
+#f17, #f18 {
+  grid-area: row9;
+}
+#f19, #f20 {
+  grid-area: row10;
+}
+#f21, #f22 {
+  grid-area: row11;
+}
+#f23, #f24 {
+  grid-area: row12;
+}
+#f25, #f26 {
+  grid-area: row13;
+}
+#f27, #f28 {
+  grid-area: row14;
+}
+#f29, #f30 {
+  grid-area: row15;
+}
+#f31, #f32 {
+  grid-area: row16;
+}
+#f33, #f34 {
+  grid-area: row17;
+}
+#f35, #f36 {
+  grid-area: row18;
+}
+#f37, #f38 {
+  grid-area: row19;
+}
+#f39, #f40 {
+  grid-area: row20;
+} */
+/* .bug_question_columns {
+  display: inline-block;
+  /* width: 80%; */
+  /* grid-column: 1; */
+/* #left_bug_questions {
+  width: 80%;
+  grid-area: l;
+}
+#right_bug_questions {
+  width: 80%;
+  grid-area: r;
+} */
